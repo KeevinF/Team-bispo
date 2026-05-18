@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Bispo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="hero-header">
+        <img src="assets/logo.jpg" alt="Team Bispo" class="logo-full">
+    </header>
+
+    <section class="hero container">
+        <div class="hero-image">
+            <img src="assets/rafa.png">
+        </div>
+        <div class="hero-text">
+            <span>DISCIPLINA • FOCO • RESULTADOS</span>
+            <h1>O MELHOR PROJETO É <span>VOCÊ</span></h1>
+
+            <p>
+                Treinamento personalizado com acompanhamento
+                individual para conquistar sua melhor versão.
+            </p>
+
+            <a class="btn">Quero começar</a>
+        </div>
+
+
+    </section>
+
+    <section class="sobre container">
+
+        <h2>Mais que treino.<span> É propósito.</span></h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <i class="fa-solid fa-dumbbell"></i>
+                <h3>Treino personalizado</h3>
+                <p>Plano feito de acordo com seus objetivos.</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <h3>Plano individual</h3>
+                <p>Estratégia personalizada para evolução.</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Resultados</h3>
+                <p>Acompanhamento contínuo do progresso.</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-shield"></i>
+                <h3>Suporte</h3>
+                <p>Contato próximo e motivação diária.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="transformacoes container">
+        <h2><span>Transformações.</span></h2>
+
+        <div class="carrossel-container">
+            <button class="carrossel-btn anterior" onclick="mudarFoto(-1)">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div class="carrossel">
+                <div class="alunos-grid">
+                    <!-- As imagens são carregadas automaticamente do arquivo config.js -->
+                </div>
+            </div>
+
+            <button class="carrossel-btn proximo" onclick="mudarFoto(1)">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <div class="carrossel-indicadores">
+            <span id="foto-atual">1</span> / <span id="foto-total">0</span>
+        </div>
+    </section>
+
+    <section class="contato container">
+        <div>
+            <h2>Vamos conversar</h2>
+            <p class="p-foot">Me conta seu objetivo</p>
+        </div>
+
+        <form id="contatoForm">
+
+            <input id="nome" placeholder="Seu nome" required>
+
+            <input id="telefone" placeholder="WhatsApp" required>
+
+            <textarea id="objetivo" placeholder="Seu objetivo" required></textarea>
+
+            <button type="submit">
+                Enviar
+            </button>
+
+        </form>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+
+        <script src="js/config.js"></script>
+        <script src="js/script.js"></script>
+
+    </section>
+
+
+
+    <a href="https://wa.me/+351922203648?text=Olá vim pelo site Team Bispo" class="whatsapp-float" target="_blank">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+    </a>
+
+</body>
+
+</html>

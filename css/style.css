@@ -1,0 +1,524 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #050505;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.hero-header {
+    width: 100%;
+    background: black;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo-full {
+    width: 100%;
+    max-width: 900px;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 60px 0;
+    gap: 50px;
+}
+
+.hero-image {
+    width: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+}
+
+.hero h1 {
+    font-size: 70px;
+    line-height: 1.2;
+}
+
+.hero span {
+    color: #d8a233;
+}
+
+.hero p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 16px 30px;
+    background: #d8a233;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.sobre {
+    padding: 60px 0;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.card {
+    padding: 30px;
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.card i {
+    color: #d8a233;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.transformacoes {
+    padding: 60px 0;
+}
+
+.transformacoes h2 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.carrossel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    position: relative;
+}
+
+.carrossel {
+    flex: 1;
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.alunos-grid {
+    display: flex;
+    gap: 20px;
+    margin-top: 0;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.aluno {
+    height: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    flex: 0 0 100%;
+    min-width: 100%;
+}
+
+.alunos-grid .aluno img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.carrossel-btn {
+    background: #d8a233;
+    color: black;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.carrossel-btn:hover {
+    background: #c49223;
+    transform: scale(1.1);
+}
+
+.carrossel-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: scale(1);
+}
+
+.carrossel-indicadores {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #d8a233;
+    font-weight: bold;
+}
+
+.contato {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 60px 0;
+}
+
+.contato>div h2 {
+    font-size: 50px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 15px;
+    background: #111;
+    border: 1px solid #222;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #999;
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    background: #d8a233;
+    border: none;
+    border-radius: 8px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.p-foot {
+    margin: 15px 0;
+    font-weight: bold;
+    color: #d8a233;
+    font-size: 18px;
+}
+
+.whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #25D366;
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* RESPONSIVIDADE - TABLET (até 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        width: 95%;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 40px 0;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .alunos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .aluno {
+        height: 300px;
+    }
+
+    .carrossel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .contato {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 40px 0;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    .contato>div h2 {
+        font-size: 36px;
+    }
+}
+
+/* RESPONSIVIDADE - MOBILE (até 768px) */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 0 10px;
+    }
+
+    .hero-header {
+        padding: 15px;
+    }
+
+    .logo-full {
+        max-width: 100%;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 30px 0;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .hero span {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        padding: 14px 24px;
+        font-size: 14px;
+    }
+
+    .sobre {
+        padding: 40px 0;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card i {
+        font-size: 28px;
+    }
+
+    .card h3 {
+        font-size: 16px;
+    }
+
+    .card p {
+        font-size: 13px;
+    }
+
+    .transformacoes {
+        padding: 40px 0;
+    }
+
+    .transformacoes h2 {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    .alunos-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .aluno {
+        height: 250px;
+    }
+
+    .contato {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 30px 0;
+    }
+
+    .contato>div {
+        text-align: center;
+    }
+
+    .contato>div h2 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .p-foot {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    input,
+    textarea {
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    button {
+        padding: 14px;
+    }
+
+    .whatsapp-float {
+        right: 15px;
+        bottom: 15px;
+        padding: 15px;
+        font-size: 24px;
+    }
+}
+
+/* RESPONSIVIDADE - MOBILE PEQUENO (até 480px) */
+@media (max-width: 480px) {
+    .container {
+        width: 98%;
+    }
+
+    .hero-header {
+        padding: 10px;
+    }
+
+    .hero {
+        padding: 20px 0;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 13px;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 13px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .sobre {
+        padding: 30px 0;
+    }
+
+    .transformacoes {
+        padding: 30px 0;
+    }
+
+    .transformacoes h2 {
+        font-size: 26px;
+    }
+
+    .aluno {
+        height: 200px;
+    }
+
+    .contato {
+        padding: 20px 0;
+    }
+
+    .contato>div h2 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .p-foot {
+        font-size: 14px;
+    }
+
+    input,
+    textarea {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
